@@ -1,6 +1,12 @@
 -- ProblemSet00 july 25 2018
 -- Submission by j.varadharajulu@accenture.com
 
+1.Select the Employee with the top three salaries
+ select * from EMPLOYEE order by SALARY desc LIMIT 3;
+ A142|TARA CUMMINGS|D04|99475|A187
+ A132|PAUL VINCET|D01|94791|A120
+ A128|ADAM WAYNE|D05|94324|A165
+
 2.Select the Employee with the least salary:
  select NAME,SALARY from EMPLOYEE where SALARY=(select min(SALARY) from EMPLOYEE);
  JOHN HELLEN|15380
@@ -32,6 +38,9 @@
 7.Select the Employee in Finance Department who has the top salary
  select e1.NAME,max(SALARY) from EMPLOYEE e1 inner join DEPT d1 on d1.DEP_ID=e1.DEP_ID where d1.DEP_NAME='FINANCE';
  ADAM WAYNE|94324
+ 
+8.Select the Employee in product depatment who has the least salary
+  select e1.NAME,min(SALARY) from EMPLOYEE e1 inner join DEPT d1 on d1.DEP_ID=e1.DEP_ID where d1.DEP_NAME='PRODUCT';
 
 9.Select the count of Empolyees in Health with maximum salary
  select count(*),max(SALARY) from EMPLOYEE e1 inner join DEPT d1 on d1.DEP_ID=e1.DEP_ID where DEP_NAME='HEALTH';
@@ -71,6 +80,10 @@
   select sum(SALARY),d.DEP_NAME FROM EMPLOYEE e inner join DEPT d on e.DEP_ID=d.DEP_ID where DEP_NAME='FINANCE';
   169981|FINANCE
 
+15.Select the department which spends the least with Dept id and Dept manager name
+  select * from DEPT d inner join(select min(s),DEP_ID from (select sum(SALARY) as s,DEP_ID from EMPLOYEE group by DEP_ID)) as t on d.DEP_ID=t.DEP_ID;
+  D04|INSURANCE|ROBERT SWIFT|155740|D04
+
 16.Select the count of Employees in each department
   select count(*),DEP_ID from EMPLOYEE group by DEP_ID;
   5|D01
@@ -86,6 +99,10 @@
 18.Select the total number of Employees in Dept id D04
   select count(*) from EMPLOYEE where DEP_ID='D04' group by DEP_ID;
   3
+  
+19.Select all department details of the Department with Maximum Employees
+  select * from DEPT d inner join(select max(c),DEP_ID from (select count(E_ID) as c,DEP_ID from EMPLOYEE group by DEP_ID))as t1 on d.DEP_ID=t1.DEP_ID;
+  D02|COMMUNICATIONS|ADAM JUSTIN|6|D02
 
 20.Select the Employees who has Tim Cook as their manager
   select e.E_ID,e.NAME from EMPLOYEE e inner join DEPT d on e.DEP_ID=d.DEP_ID where d.DEP_MANAGER='TIM COOK';
