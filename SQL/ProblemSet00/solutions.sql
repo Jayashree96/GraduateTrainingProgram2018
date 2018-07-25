@@ -1,5 +1,5 @@
 -- ProblemSet00 july 25 2018
--- Submission by j.varadharajulu 
+-- Submission by j.varadharajulu@accenture.com
 
 2.Select the Employee with the least salary:
  select NAME,SALARY from EMPLOYEE where SALARY=(select min(SALARY) from EMPLOYEE);
