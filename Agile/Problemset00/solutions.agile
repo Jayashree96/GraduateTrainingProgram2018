@@ -1,0 +1,79 @@
+--ProblemSet00 july 27 2018
+--Submission by j.varadharajulu@accenture.com
+
+1.How does agile testing (development) methodology differ from other testing (development) methodologies?
+    -Agile testing(development) methodology delivers business value to the customer, where satisfaction is ensured with the end product.
+    -In Agile, changes in requirements are considered in the project whereas some methodologies work with fixed requirements.
+    -Agile follows an iterative approach where tasks are distributed and improvement or changes are made based on feedbacks from the customer.
+    -Collabration with the customer happens throughout the project.
+
+2.What are the most important components of Agile?
+  -Individuals and interaction over processees and tools
+  -Working software over detailed documentation
+  -Customer collabration over contract negotiation
+  -Responding to change over following a plan  
+
+3.What is difference between Epic,features, User stories & Tasks?
+  Epic- the working software or the end product delivered to the customer
+  Features-description of end product's characterization, capability that are delegated as user stories.
+  User stories-listed from the product backlog based on priority and delegated as tasks to the scrum team.
+  Task- work to be completed for each sprint, granular level of task.
+
+4.Explain what is a product backlog in Scrum
+  -Product backlog is the requirements or things which are listed down and given by the product owner to the scrum team.   -List is prioritized and given for each team to complete the tasks accordingly.
+
+5.What is Scrum Sprint?
+ -Scrum Sprint is a duration of 2 weeks to 4 weeks.
+ -Sprint planning is made in the beginning, for tasks to be completed within that sprint. 
+ -Another sprint starts immediately after one sprint.
+ -sprint review meeting and restrospective meeting are held at the end of each sprint.
+
+6.What are the artifacts of Scrum process?
+  -Product increments
+  -Product backlog
+  -Sprint backlog
+
+7.What do you understand by sprint backlog?
+   -sprint backlog is the list of tasks chosen from the product backlog based on priority. 
+   -done by the scrum team along with scrum master
+   -work is delegated as tasks to the team for a single sprint.
+
+8.What is the role of the Product Owner?
+   -Product owner is the communication bridge between customer and the scrum team, representing the customer. 
+   -Product owner lists the things in product backlog and prioritize those requirements.
+
+9.What are the different roles in Scrum
+ -Product owner
+ -Scrum master
+ -Team members
+
+10.What are the responsibilities of a Scrum Master?
+   -Scrum master represents and facilitates scrum team. 
+   -Scrum master helps and instructs scrum team for sprint backlog to be chosen from the product backlog based on priority     -resolves issues in achieving team's goal.
+
+11.What are different ceremonies and their importance in Scrum?
+  Scrum call- daily standup, every individual  discuss about their completed work and tasks to be completed, any issues or blockers.
+  Sprint planning- at the beginning of each sprint for the work to be done on that sprint(sprint backlog) chosen from product backlog
+  Sprint review- at the end of each sprint for discussing about the completed work and plans for the upcoming tasks.
+  Sprint retrospective-  held at the end of each sprint, about what went well during the sprint and what can be improved.
+
+12.What is the difference between Sprint Planning Meeting and Sprint Retrospective Meeting?
+  Sprint Planning Meeting 
+    -conducted at the beginning of each sprint to discuss on the work to be done for that sprint.
+    -sprint backlog is listed, selecting from the product backlog items based on priority.
+  Sprint Retrospective Meeting
+    -held at the end of each sprint
+    -what went well during the sprint, what went not well, areas of improvement and apreciations for the upcoming sprint.
+  Both the meetings are facilitated by the scrum master.
+
+13.What is the difference between agile & scrum
+  -Agile is a set of principles, delivering business value to the client through the working software on an early and continuous basis with customer collabration.
+  -Scrum is one of the methodologies to implement agile.
+
+14.Explain Agile in 30 seconds.
+Agile is a set of principles, delivering business value to the client through the working software/product on an early and continuous basis with customer collabration. Responding to change in requirements and progress in working software through feedbacks.
+
+15.What is the Daily Stand-Up?
+Daily Stand up/scrum call 
+  -15 minutes daily call 
+  -every individual in a scrum team discuss about what happened today, their tasks for tomorrow and any issues or blockers in completing tasks.
