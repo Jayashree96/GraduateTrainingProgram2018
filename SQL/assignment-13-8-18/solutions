@@ -1,0 +1,72 @@
+assignment aug-14-2018
+submission by j.varadharajulu@accenture.com
+
+1) What are the most important sql commands
+ create, alter, drop, select, insert, delete, update
+2)What is an Entity,Attribute,Record,operator
+ An entity is a real world object about which the data is collected and stored. Ex:student
+ An attribute is the information about entity. Ex:student id, stuent name.
+ A record is a entry in a table containing one or more values. Group of records are stored in a table. It is often called a  row.
+ Operators used to perform arithmetic operations and comparisons. Used with where clause
+3)Why is it essential to select columns in a resultset instead of doing a select *.What is the use of distinct
+ selecting columns is the efficient way than select * since selecting specific columns will be faster and it reduces  complexity. Distinct is used to avoid duplicates. 
+4)What is the difference between Where and Having
+ where clause is used with select query where it filters rows with the condition specified. Having clause is used with the aggregate function where it filers a group with the specified condition.
+5)What are the different operators used in Where.difference between And not and OR
+ Arithmetic operators
+ Logical operators
+ Conditional operators
+ AND- gives the result when both the conditions in a and statement are satisfied.
+ OR- gives the result when either of the conditions is satisfied
+ NOT- gives the result in conrast to the specified condition
+6)what is the difference between Group by and order by when do we use them
+ Group by is used with select query which is used to group similar data.
+ Order by is used to sort the data in ascending or descending order based on a single or multiple columns.
+7)What is an aggregate function.Specify the different types of aggregate functions
+ An aggregate function is used to perform calculation on a group of values and give a single value as a result.
+ Commonly used aggregate functions are avg(),min(),max(),count(),sum()
+8)What is a constraint.What is a primary key,Foreign key?Why do we use them
+ Constraints are rules on one or more columns on the table that limits the type of data entering into the table.
+ Primary key- uniquely identifies each row in a table
+ Foreign key-refers to the primary key from another table.
+9)What is an index?Why do we use indexing?
+ An index is used for easy and faster retrieval of datas from the table.
+10)What is an view.
+ A view is a table created by selecting fields from one or more tables available in a database. It can have all the rows or  specific rows from a table based on a condition.
+11)Specify the different type of joins with an example?
+ consider table student and course
+ stu_id  stu_name  course_id                    course_id   course_name
+  1.      aarthi      001                           001         java
+  2.      bavya       002                           002         python
+  3.      divya       001                           003         sql
+  4.      kavitha     004
+ 
+ inner join- inner join joins all matching values from both the tables
+   stu_id  stu_name  course_id  course_name
+  1.      aarthi      001           java
+  2.      bavya       002           python
+  3.      divya       001           java
+ 
+ left outer join- returns all values from left table and matching records from right table
+  stu_id  stu_name  course_id    course_name
+  1.      aarthi      001           java
+  2.      bavya       002           python
+  3.      divya       001           java
+  4.      kavitha     004
+  
+ right outer join- returns all values from right table and matching records from left table.
+  stu_id  stu_name  course_id   course_name
+  1.      aarthi      001           java
+  2.      bavya       002           python
+  3.      divya       001           java 
+                      003           sql              
+ 
+ full outer join-returns all matching records either in left or right table
+ stu_id  stu_name  course_id   course_name
+  1.      aarthi      001         java
+  2.      bavya       002         python
+  3.      divya       001         java
+  4.      kavitha     004     
+                      003         sql     
+ 
+ self join - self join joins a table with the same table.
