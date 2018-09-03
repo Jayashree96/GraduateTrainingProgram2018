@@ -1,0 +1,103 @@
+day1and2 3rd september 2018
+submission by j.varadharajulu@accenture.com
+
+1)get first name and last name from user and print your full name 
+a=raw_input("enter first name")
+b=raw_input("enter last name")
+c=(a+b)
+print(c)
+  enter first namejaya
+  enter last nameshree
+  jayashree
+
+2) get ur full name, age as input from user and print first name and last name , age using string slicing
+ i) 2 raw_input get name  and age 
+ ii) print first name and last name and age 
+ iii) WHEN age >= 18 , he/she is eligible to vote
+ iv) WHEN age < 18 , he/she is not eligible to vote
+a=raw_input("enter full name")
+b=raw_input("enter age")
+print(a[:4])
+print(a[4:9])
+print(b[:2])
+b=int(b)
+if a>=18:
+ print("eligible to vote")
+else:
+ print("not eligible to vote")
+       enter full namejayashree
+       enter age22
+       jaya
+       shree
+       22
+       eligible to vote
+
+4) Write a Python program to perform sum of three given integers. 
+       However, if any of the two values are equal then sum will be zero (eg : 2+1+1 = 0)
+a=raw_input("enter a value")
+b=raw_input("enter b value")
+c=raw_input("enter c value")
+a=int(a)
+b=int(b)
+c=int(c)
+if a==b or a==c or b==c:
+ print("sum is 0")
+else:
+ print(a+b+c)
+  enter a value2             enter a value3
+  enter b value3             enter b value3            
+  enter c value4             enter c value4    
+  9                          sum is 0
+   
+5) Write a Python program to check whether a year is leap year or not
+a=raw_input("enter a year")
+a=int(a)
+if (a%4==0) and ((a%400==0) or (a%100!=0)):
+ print("leap year")
+else:
+ print("not a leap year")
+     enter a year2018               enter a year2020
+     not a leap year                leap year
+
+
+6)Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+
+a=raw_input("enter a string")
+up=0
+lo=0
+for i in a:
+ if (i.isupper()):
+  up=up+1
+ elif (i.islower()):
+  lo=lo+1
+print("uppercase letters %s"%up)
+print("lowercase letters %s"%lo)
+   enter a stringHello World!
+   uppercase letters 2
+   lowercase letters 8
+
+8)Write a program that accepts a sentence and calculate the number of upper case letters and lower case letters.
+
+a=[2,3,4,6,7,8]
+b=[]
+for i in a:
+ if(i%2==0):
+  b.append(i)
+print(b)
+print(sum(b))
+   [2, 4, 6, 8]
+   20
+
+9) Write a program which accepts a sequence of comma-separated numbers from console and generate a list and a tuple which 
+contains every number
+a=raw_input("enter values")
+b=a.split(',')
+b=map(int,b)
+print(b)
+c=tuple(b)
+print(c)
+ enter values34,67,55,33,12,98
+ [34, 67, 55, 33, 12, 98]
+ (34, 67, 55, 33, 12, 98)
+
+
