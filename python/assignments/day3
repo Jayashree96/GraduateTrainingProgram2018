@@ -1,0 +1,65 @@
+day3 4th september 2018
+submission by j.varadharajulu@accenture.com
+
+a)Given the following dictionary:
+      inventory = {
+                   'gold' : 500,
+                   'pouch' : ['flint', 'twine', 'gemstone'],
+                   'backpack' : ['xylophone','dagger', 'bedroll','bread loaf']
+                }
+       Try to do the followings:
+       i)Add a key to inventory called 'pocket'.
+       ii)Set the value of 'pocket' to be a list consisting of the strings 'seashell', 'strange berry', and 'lint'.
+       iii).sort()the items in the list stored under the 'backpack' key.
+       iv)Then .remove('dagger') from the list of items stored under the 'backpack' key.
+       v)Add 50 to the number stored under the 'gold' key.
+inventory={'gold':500,'pouch':['flint','twine','gemstone'],'backpack':['xylophone','dagger','bedroll','bread loaf']}
+inventory['pocket']=[]
+print(inventory)
+inventory['pocket'].extend(['seashell','strange berry','lint'])
+print(inventory)
+inventory['backpack'].sort()
+print(inventory)
+inventory['backpack'].remove('dagger')
+print(inventory)
+inventory['gold']=[]
+inventory['gold'].extend([500,50])
+print(inventory)
+
+b) create a student details dictionary having {'student1':[marks1,marks2, marks3],'student2':[marks1,marks2,marks3]}
+       i)Create the dictionary as mentioned above
+       ii) need to perform total and average of the marks for each student
+stu_details={}
+s_count=int(raw_input("enter no of student count:"))
+i=1
+while(i<=s_count):
+ stu_name=raw_input("enter student name:")
+ sub_count=int(raw_input("enter subject count:"))
+ j=1
+ marks=[]
+ while(j<=sub_count):
+  sub_mark=int(raw_input("enter marks for subject"+str(j)+":"))
+  j+=1
+  marks.append(sub_mark)
+ i+=1
+ stu_details[stu_name]=marks
+print(stu_details)
+for k in stu_details.iterkeys():
+ total=sum(stu_details[k])
+ no_sub=len(stu_details[k])
+ average=total/no_sub
+ print(total,average) 
+enter no of student count:2
+enter student name:student1
+enter subject count:3
+enter marks for subject1:90
+enter marks for subject2:67
+enter marks for subject3:78
+enter student name:student2
+enter subject count:3
+enter marks for subject1:80
+enter marks for subject2:87
+enter marks for subject3:79
+{'student2': [80, 87, 79], 'student1': [90, 67, 78]}
+(246, 82)
+(235, 78)
