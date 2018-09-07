@@ -1,0 +1,38 @@
+problems 7th september 2018
+submission by j.varadharajulu@accenture.com
+1.Given a full name, your task is to capitalize the name appropriately, in a word only the first character is capitalized.
+ full_name=raw_input("Enter full name:")
+ split_name=full_name.split(' ')
+ cap_name=[]
+ for i in split_namename:
+     cap_name.append(i.capitalize())
+ print(" ".join(cap_name))
+2.You have a record of  students. Each record contains the student's name, and their percent marks in Maths, Physics and Chemistry. The marks can be floating values. The user enters some integer  followed by the names and marks for students. You are required to save the record in a dictionary data type. The user then enters a student's name. Output the average percentage marks obtained by that student, correct to two decimal places.
+ stud_details={}
+ count=int(input("enter student count:"))
+ for i in range(count):
+     inp=input("enter student name and marks:")
+     inp=inp.split(" ")
+     key=inp.pop(0)
+     mark=[]
+     for j in range(len(inp)):
+         mark.append(int(inp[j]))
+         stud_details[key]=mark
+ name=input("enter name to get average:")
+ avg=sum(stud_details[name])/len(stud_details[name])
+ print(avg)
+3.You are given two values a and b . 
+Perform integer division and print a/b .This error is raised when the second argument of a division or modulo operation is zero.
+ def excep_fn():
+ try:
+  print int(a)/int(b)
+ except Exception as error:
+  print(error)
+
+count=int(raw_input("enter the count"))
+for i in range(count):
+ a=raw_input("enter 1st value")
+ b=raw_input("enter 2nd value")
+ excep_fn()
+
+ 
