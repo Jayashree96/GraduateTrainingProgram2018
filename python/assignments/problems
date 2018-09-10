@@ -34,5 +34,69 @@ for i in range(count):
  a=raw_input("enter 1st value")
  b=raw_input("enter 2nd value")
  excep_fn()
+4.Consider a list (list = []). You can perform the following commands:
+
+insert i e: Insert integer e at position i.
+print: Print the list.
+remove e: Delete the first occurrence of integer e.
+append e: Insert integer e at the end of the list.
+sort: Sort the list.
+pop: Pop the last element from the list.
+reverse: Reverse the list.
+Initialize your list and read in the value of  followed by  lines of commands where each command will be of the 7 types listed above. Iterate through each command in order and perform the corresponding operation on your list.
+
+dict_com={}
+li=[]
+n=input("Enter the no of commands")
+for i in range(n):
+      com=raw_input();
+      l1=com.split(" ")
+      dict_com[i]=l1
+for i in range(n):
+      if(dict_com[i][0]=="insert"):
+           li.insert(int(dict[i][1]),int(dict[i][2]))
+      elif(dict_com[i][0]=="print"):
+           print li
+      elif(dict_com[i][0]=="remove"):
+           li.remove(int(dict[i][1]))
+      elif(dict_com[i][0]=="append"):
+           li.append(int(dict[i][1]))
+      elif(dict_com[i][0]=="sort"):
+           li.sort()
+      elif(dict_com[i][0]=="pop"):
+           li.pop(len(l)-1)
+      elif(dict_com[i][0]=="reverse"):
+           li.reverse()
+
+6.Your job is to find whether set A is a subset of set B .If set A is subset of set B , print True.
+If set A is not a subset of set B , print False.
+Input Format:-
+The first line will contain the number of test cases, T . 
+The first line of each test case contains the number of elements in set A .
+The second line of each test case contains the space separated elements of set A .
+The third line of each test case contains the number of elements in set B .
+The fourth line of each test case contains the space separated elements of set B .
+
+tc=int(input("enter the number of test cases:"))
+list_set = []
+for i in range(tc):
+    no = int(input("enter the number of elements for set 1:"))
+    ele = input("enter the elements:")
+    ele_list = ele.split(" ")
+    if no == len(ele_list):
+     no1 = int(input("enter the number of elements for set 2:"))
+     ele1 = input("enter the elements:")
+     ele_list1 = ele1.split(" ")
+     if no1 == len(ele_list1):
+       print(ele_list)
+       print(ele_list1)
+       list_set.append(set(ele_list).issubset(set(ele_list1)))
+     else:
+       print("enter valid numbers")
+    else:
+      print("enter valid numbers")
+for k in list_set:
+    print(k)
+
 
  
