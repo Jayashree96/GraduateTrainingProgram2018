@@ -1,0 +1,168 @@
+day4 september 12th 2018
+submission by j.varadharajulu@accenture.com
+1.Define a class named Shape and its subclass Square. The Square class has an init function which takes a length as argument. 
+Both classes have a area function which can print the area of the shape where Shape's area is 0 by default.
+ class shape:
+    def area(self):
+        print(0)
+
+class square(shape):
+    def __init__(self,a):
+        print("init")
+        self.a=a
+        self.area()
+        shape.area(self)
+    def area(self):
+        area = self.a * self.a
+        print(area)
+
+obj=square(5)
+2.Define a class Person and its two child classes: Male and Female. 
+All classes have a method "getGender" which can print "Male" for Male class and "Female" for Female class.
+ class person:
+    def getgender(self):
+        print("person")
+class male(person):
+    def getgender(self):
+        print("male")
+class female(person):
+    def getgender(self):
+        print("female")
+obj_male=male()
+obj1_fem=female()
+obj_male.getgender()
+obj1_fem.getgender()
+
+3.Design and implement a Money class that stores monetary values in dollars and cents. 
+Special method init should have the following function header, def init(self, dollars, cents) Include special method repr (str) for displaying values in dollars and cents: $ 0.45, $ 1.00, $ 1.25. 
+Also include special method add, and three getter methods that each provide the monetary value in another currency. Choose any three currencies to convert to.
+ class money:
+    def __init__(self,dollar,cent):
+        self.dollar=dollar
+        self.cent=cent
+    def repr(self):
+        if int(self.cent)<=99:
+            money=(self.dollar,self.cent)
+            self.value=float(".".join(money))
+            print("the currency is:",self.value)
+        else:
+            cen=float(self.cent)/100
+            self.value=float(self.dollar)+cen
+            print("the currency is:",self.value)
+        self.add()
+        print("money in rupees:",self.rs)
+        print("money in euros:",self.euro)
+        print("money in yen:",self.riyal)
+
+    def add(self):
+        self.rs=self.value*72.42
+        self.euro=self.value*0.87
+        self.riyal=self.value*3.75
+
+
+dol=input("enter the dollar value")
+cent=input("enter the cent value")
+obj=money(dol,cent)
+obj.repr()
+
+6.Develop an abstract class named Temperature that stores a single temperature. The class should have the following function header for special method init,
+def __init__(self, temperature)
+	'''The abstract class should contain the following methods:
+	_str__ — should return a string of the form “75 degrees Fahrenheit”
+	aboveFreezing() — returns True if temperature above the freezing point
+	convertToFahren — returns a new Temperature object converted to degrees Fahrenheit
+	convertToCelsius — returns a new Temperature object converted to degrees Celsius
+	convertToKelvin — returns a new Temperature object converted to degrees Kelvin	
+	'''
+Develop the subclasses Fahrenheit, Celsius and Kelvin to appropriately implement each of the methods in the abstract Temperature class. (Note that when a meaningless conversion method is applied, for example, temp1.convertToFahrenheit() where temp1 is an object of type Fahrenheit, then a copy of the Temperature object should be returned.)
+Demonstrate the correctness of your classes by doing the following:
+Create a list of Temperature objects of a mix of Temperature types
+Print out the value of each temperature in the list, and add “above freezing” if the temperature is above freezing (for the specifi c temperature scale).
+create a new list of temperatures containing each temperature of the original list converted to a common temperature scale (Fahrenheit, Celsius, or Kelvin).
+For each temperature object in the new list, print out its temperature value, and if it is above the freezing point.
+ class temperature:
+    def __init__(self, temperature):
+        pass
+    def str(self):
+        pass
+    def abovefreezing(self):
+        pass
+    def contofahren(self):
+        pass
+    def contocelsius(self):
+        pass
+    def contokelvin(self):
+        pass
+class fahrenheit(temperature):
+    def __init__(self, temperature):
+        self.temp = temperature
+    def str(self):
+        return self.temp
+    def abovefreezing(self):
+        if self.temp>32:
+            return "true"
+        else:
+            return "false"
+    def contofahren(self):
+        return self.temp
+    def contocel(self):
+        cel = self.temp / 33.85
+        return cel
+    def contokel(self):
+        kel = self.temp * 255.9
+        return kel
+class celsius(temperature):
+    def __init__(self, temperature):
+        self.temp = temperature
+    def str(self):
+        return self.temp
+
+    def abovefreezing(self):
+        if self.temp>0:
+            return "true"
+        else:
+            return "false"
+    def contofahren(self):
+        fah = self.temp * 33.8
+        return fah
+    def contocel(self):
+        return self.temp
+    def contokel(self):
+        kel = self.temp * 274.15
+class kelvin(temperature):
+    def __init__(self, temperature):
+        self.temp = temperature
+    def str(self):
+        return self.temp
+    def abovefreezing(self):
+        if self.temp >= 273:
+            return "true"
+        else:
+            return "false"
+    def contofahren(self):
+        a = 9 / 5.0
+        return (self.temp * a) - 459.67
+    def contocel(self):
+        cel = self.temp - 273.15
+        return cel
+    def contokel(self):
+        return self.temp
+temp=int(input("enter the temperature"))
+obj=fahrenheit(temp)
+obj1=celsius(temp)
+obj2=kelvin(temp)
+print(obj.str())
+print(obj1.str())
+print(obj2.str())
+print("is farenhiet above freezing ", obj.abovefreezing())
+print("is celcius above freezing ", obj1.abovefreezing())
+print("is kelvin above freezing ", obj2.abovefreezing())
+print("fahrenheit", obj.contofahren())
+print("farenheit in celsius ", obj.contocel())
+print("farenheit in kelvin ", obj.contokel())
+print("celsius", obj1.contocel)
+print("celsius in farenheit", obj1.contofahren())
+print("celcius in kelvin ", obj1.contokel())
+print("kelvin", obj2.contokel())
+print("kelvin in farenheit ", obj2.contofahren())
+print("kelvin in celcius", obj2.contocel())
